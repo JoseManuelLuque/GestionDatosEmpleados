@@ -1,3 +1,3 @@
 fun main() {
-    leerEmpleados()
+    EmpleadosXML(leerEmpleados())
 }
