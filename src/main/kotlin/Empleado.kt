@@ -22,7 +22,7 @@ data class Empleado(
     val id: Int,
     val apellido: String,
     val departmento: String,
-    val salario: Double,
+    var salario: Double,
 )
 
 /**
@@ -90,6 +90,17 @@ fun EmpleadosXML(listaEmpleados: MutableList<Empleado>) {
     }
 }
 
-fun modificarSueldo() {
+fun modificarSueldo(listaEmpleados: MutableList<Empleado>) {
+    println("Id del empleado a modificar el sueldo: ")
+    val FindID = readln().toInt()
 
+    for (empleadoLista in listaEmpleados) {
+        if (empleadoLista.id == FindID) {
+            println("El sueldo del emepleado con ID: ${empleadoLista.id} es un total de: ${empleadoLista.salario} €")
+            println("Cual seria su nuevo sueldo:")
+            var sueldo = readln().toDouble()
+
+            empleadoLista.salario = sueldo
+        }
+    }
 }
