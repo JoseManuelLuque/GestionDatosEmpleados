@@ -104,3 +104,7 @@ fun modificarSueldo(listaEmpleados: MutableList<Empleado>) {
         }
     }
 }
+
+fun imprimirEmpleados() {
+    
+}
